@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | ALIGNMENT+</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+  <header class="app-navbar"><div class="nav-inner"><a class="brand" href="../dashboardPage/dashboard.html"><span class="brand-mark">A+</span> ALIGNMENT+</a><button class="nav-toggle" data-nav-toggle aria-label="Open menu"><span></span><span></span><span></span></button><nav><ul class="nav-links"><li><a href="../dashboardPage/dashboard.html">Dashboard</a></li><li><a href="../conditionsPage/conditions.html">Conditions</a></li><li><a class="active" href="profile.html">Profile</a></li><li><a href="../settingsPage/settings.html">Settings</a></li></ul></nav><div class="nav-actions"><a class="btn btn-secondary" href="../loginPage/login.html">Logout</a></div></div></header>
+  <main class="page-shell section">
+    <section class="page-hero">
+      <span class="eyebrow">Profile</span>
+      <h1>Your personal care profile.</h1>
+      <p>Keep account, contact, and medical preference placeholders organized for future rehabilitation features.</p>
+    </section>
+    <section class="grid two section compact">
+      <article class="card pad">
+        <div class="form-row" style="justify-content:flex-start;"><div class="avatar" id="avatar">A+</div><div><h2 id="profileName">ALIGNMENT+ User</h2><p class="muted" id="profileEmail">user@example.com</p></div></div>
+        <div class="alert alert-warning" style="margin-top:20px;">Medical information here is a preference placeholder and should not replace professional assessment.</div>
+      </article>
+      <form class="form-card" data-toast="Profile details saved locally.">
+        <h2>Edit profile</h2>
+        <div class="field"><label for="name">Full name</label><input id="name" placeholder="Full name"></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="name@example.com"></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" placeholder="Optional phone number"></div>
+        <button class="btn btn-primary" type="submit">Save profile</button>
+      </form>
+    </section>
+    <section class="grid two">
+      <article class="card pad"><h2>Account information</h2><p class="muted">Member type: Patient workspace</p><p class="muted">Status: Active</p><p class="muted">Data storage: Browser local storage prototype</p></article>
+      <article class="card pad"><h2>Medical preferences</h2><p class="muted">Preferred care style, clinician notes, pain sensitivity, and accessibility needs will be connected in a later module.</p></article>
+    </section>
+  </main>
+  <script src="../js/app.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

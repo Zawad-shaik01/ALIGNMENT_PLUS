@@ -1,0 +1,258 @@
+.hero-landing {
+  padding: 72px 0 36px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 22px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.5rem, 7vw, 5.2rem);
+}
+
+.hero-copy p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.body-map {
+  display: grid;
+  min-height: 390px;
+  place-items: center;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #effaf9, #ffffff);
+}
+
+.body-figure {
+  position: relative;
+  width: 164px;
+  height: 320px;
+}
+
+.body-figure::before,
+.body-figure::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+}
+
+.body-figure::before {
+  top: 0;
+  left: 55px;
+  width: 54px;
+  height: 54px;
+  background: #d9f5f1;
+  border: 3px solid var(--primary);
+}
+
+.body-figure::after {
+  top: 68px;
+  left: 67px;
+  width: 30px;
+  height: 170px;
+  background: var(--primary);
+  box-shadow: -52px 82px 0 -4px #91d8d1, 52px 82px 0 -4px #91d8d1, -36px 214px 0 -5px #164e63, 36px 214px 0 -5px #164e63;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.metric-strip div {
+  border-radius: 16px;
+  background: var(--surface-muted);
+  padding: 14px;
+}
+
+.metric-strip strong {
+  display: block;
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+}
+
+.condition-card {
+  overflow: hidden;
+}
+
+.condition-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #f4fbfa;
+  padding: 18px;
+}
+
+.condition-card .content {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.dashboard-layout {
+  display: grid;
+  gap: 22px;
+  padding: 34px 0 70px;
+}
+
+.quick-card {
+  display: grid;
+  gap: 10px;
+  min-height: 170px;
+}
+
+.activity-list {
+  display: grid;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+}
+
+.settings-list {
+  display: grid;
+  gap: 14px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+}
+
+.switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+.switch span::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  content: "";
+  transition: 0.2s ease;
+}
+
+.switch input:checked + span {
+  background: var(--primary);
+}
+
+.switch input:checked + span::after {
+  transform: translateX(22px);
+}
+
+.avatar {
+  display: grid;
+  width: 96px;
+  height: 96px;
+  place-items: center;
+  border-radius: 28px;
+  background: var(--primary);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.timeline {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-item {
+  border-left: 3px solid var(--primary);
+  padding-left: 16px;
+}
+
+.faq details {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 16px 18px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.faq details p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.error-illustration {
+  display: grid;
+  width: min(360px, 100%);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #e6fffb, #ffffff);
+  box-shadow: var(--shadow);
+  color: var(--primary-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(4rem, 18vw, 8rem);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .body-map {
+    min-height: 300px;
+  }
+}

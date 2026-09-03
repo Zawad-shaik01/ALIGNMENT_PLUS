@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoliosis Routine | ALIGNMENT+</title>
+  <link rel="stylesheet" href="routine.css" />
+</head>
+<body>
+
+  <section class="routine-page">
+
+    <header class="routine-header">
+      <a href="../ExercisePlanPage/exercise-plan.html" class="back-btn">← Back</a>
+
+      <div class="routine-title">
+        <h2 id="routineCondition">Scoliosis Routine</h2>
+        <p id="routineCounter">Exercise 1 of 15</p>
+      </div>
+
+      <button id="finishBtn" class="finish-btn">Finish</button>
+    </header>
+
+    <main class="routine-main">
+
+      <div class="animation-panel">
+        <img id="exerciseImage" src="" alt="Exercise animation" />
+      </div>
+
+      <div class="exercise-info">
+        <span class="exercise-badge" id="exerciseLevel">Beginner</span>
+        <h1 id="exerciseTitle">Exercise Name</h1>
+        <p id="exerciseDesc">Exercise description will appear here.</p>
+
+        <div class="timer-box">
+          <h2 id="exerciseDuration">10 reps</h2>
+          <p>Recommended duration / repetition</p>
+        </div>
+
+        <div class="control-buttons">
+          <button id="prevBtn" class="circle-btn">⏮</button>
+          <button id="playPauseBtn" class="main-control">Start Routine</button>
+          <button id="nextBtn" class="circle-btn">⏭</button>
+        </div>
+      </div>
+
+    </main>
+
+    <section class="details-section">
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="instructions">Instructions</button>
+        <button class="tab-btn" data-tab="focus">Focus Area</button>
+        <button class="tab-btn" data-tab="mistakes">Common Mistakes</button>
+        <button class="tab-btn" data-tab="breathing">Breathing Tips</button>
+      </div>
+
+      <div class="tab-content active" id="instructions">
+        <ul id="instructionsList"></ul>
+      </div>
+
+      <div class="tab-content" id="focus">
+        <div id="focusList" class="pill-group"></div>
+      </div>
+
+      <div class="tab-content" id="mistakes">
+        <ul id="mistakesList"></ul>
+      </div>
+
+      <div class="tab-content" id="breathing">
+        <ul id="breathingList"></ul>
+      </div>
+
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-top">
+        <span id="progressText">Progress: 1 / 15</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </section>
+
+  </section>
+
+  <div id="completeModal" class="complete-modal">
+    <div class="complete-box">
+      <h2>Routine Completed 🎉</h2>
+      <p>You have completed your scoliosis support routine.</p>
+      <div class="complete-actions">
+        <button id="restartRoutine">Restart</button>
+        <a href="../ExercisePlanPage/exercise-plan.html">Back to Plan</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="routine.js"></script>
+</body>
+</html>

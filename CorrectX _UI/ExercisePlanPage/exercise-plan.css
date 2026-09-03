@@ -1,0 +1,1370 @@
+
+  /* ======================================================
+   ALIGNMENT+ EXERCISE PLAN
+   exerciseplan.css
+   Part 2A
+====================================================== */
+
+/* ---------- Google Font ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ---------- Variables ---------- */
+
+:root{
+
+    /* Alignment+ Theme */
+
+    --primary:#0F766E;
+    --primary-dark:#0F172A;
+    --primary-light:#DFF7F4;
+    --secondary:#14B8A6;
+
+    --text:#0F172A;
+    --text-light:#64748B;
+
+    --white:#ffffff;
+    --border:#D8EEEB;
+
+    --shadow:0 15px 35px rgba(15,118,110,.10);
+
+    --glass:rgba(255,255,255,.78);
+
+    --radius:22px;
+
+}
+
+
+/* ---------- Reset ---------- */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.45) 0%, transparent 28%),
+        radial-gradient(circle at 80% 75%, rgba(255,255,255,.35) 0%, transparent 30%),
+        linear-gradient(135deg,#dff8f4 0%,#d9f5f1 30%,#edfdfc 65%,#f9ffff 100%);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:var(--text);
+
+}
+
+/* ---------- Decorative Background ---------- */
+
+.background-blur{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.45;
+
+    z-index:-1;
+
+}
+
+
+.blur1{
+
+    width:320px;
+    height:320px;
+
+    background:#80D8FF;
+
+    top:-100px;
+    left:-120px;
+
+}
+
+
+.blur2{
+
+    width:380px;
+    height:380px;
+
+    background:#64B5F6;
+
+    bottom:-150px;
+    right:-120px;
+
+}
+
+
+
+/* ======================================================
+                    HEADER
+====================================================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 50px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.5);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+
+/* ---------- Logo ---------- */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+
+.logo-icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:16px;
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--secondary));
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:22px;
+
+    box-shadow:0 10px 25px rgba(42,143,231,.35);
+
+}
+
+
+.logo-text h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--primary-dark);
+
+}
+
+
+.logo-text span{
+
+    font-size:12px;
+
+    color:var(--text-light);
+
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    transition:.30s;
+
+    font-weight:500;
+
+}
+
+
+nav a:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+}
+
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.avatar{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:600;
+
+}
+
+
+
+/* ======================================================
+                    MAIN
+====================================================== */
+
+.container{
+
+    max-width:1350px;
+
+    margin:auto;
+
+    padding:45px;
+
+}
+
+
+
+/* ---------- Back Button ---------- */
+
+.back-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:35px;
+
+    color:var(--text-light);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+
+.back-btn:hover{
+
+    color:var(--primary-dark);
+
+}
+
+
+
+/* ======================================================
+                    HERO
+====================================================== */
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:1.8fr .8fr;
+
+    gap:40px;
+
+    align-items:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.hero-text h1{
+
+    color:#0F172A;
+
+    font-size:56px;
+
+    font-weight:700;
+
+}
+
+
+
+.hero-text p{
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+    font-size:16px;
+
+}
+
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.hero-image img{
+
+    width:240px;
+
+    max-width:100%;
+
+    border-radius:25px;
+
+    background:white;
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* ======================================================
+                    STATS
+====================================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+}
+
+
+.stat-card{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+.stat-card i{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:25px;
+
+}
+
+
+.stat-card h3{
+
+    color:#0F172A;
+
+}
+
+
+.stat-card p{
+
+    color:var(--text-light);
+
+}
+
+
+
+/* ======================================================
+                CONTENT GRID
+====================================================== */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
+
+}
+
+
+
+/* ======================================================
+            LEFT EXERCISE SECTION
+====================================================== */
+.exercise-section{
+
+    background:transparent;
+
+    padding:0;
+
+    box-shadow:none;
+
+}
+
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.section-header h2{
+
+    color:#0F172A;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+
+.section-header p{
+
+    color:var(--text-light);
+
+}
+
+
+
+/* ---------- Tips Button ---------- */
+
+.tips-btn{
+
+    border:none;
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+    padding:12px 18px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.30s;
+
+}
+
+
+.tips-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+/* ======================================================
+                    SIDEBAR
+====================================================== */
+
+.sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+/* ---------- Universal Card ---------- */
+
+.card{
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(20px);
+
+    padding:28px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.card h3{
+
+    color:#0F172A;
+
+    font-weight:700;
+
+}
+
+
+.card ul{
+
+    list-style:none;
+
+}
+
+
+.card li{
+
+    padding:12px 0;
+
+    color:var(--text-light);
+
+    border-bottom:1px solid #eef5fb;
+
+}
+
+
+.card li:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+/* ---------- Note ---------- */
+
+.note{
+
+    background:linear-gradient(
+        135deg,
+        #EAF6FF,
+        #F6FBFF
+    );
+
+    border-left:5px solid var(--primary);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.note i{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+
+.note p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}/* ======================================================
+                EXERCISE LIST
+====================================================== */
+
+#exerciseContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+
+/* Individual Exercise Card */
+
+.exercise-card{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:70px 110px 1fr auto auto;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:#fff;
+
+    border:1px solid rgba(42,143,231,.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+
+.exercise-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+
+}
+
+
+/* Completed */
+
+.exercise-card.completed{
+
+    background:#eef9ff;
+
+    border-color:#8fd3ff;
+
+}
+
+
+/* Number */
+
+.exercise-number{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+
+/* Image */
+
+.exercise-image{
+
+    width:100px;
+
+    height:75px;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    background:#eaf6ff;
+
+}
+
+
+.exercise-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* Details */
+
+.exercise-details h3{
+
+    color:#0F172A;
+
+    font-weight:600;
+
+}
+
+
+.exercise-details p{
+
+    color:var(--text-light);
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+
+/* Time */
+
+.exercise-time{
+
+    color:var(--text-light);
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+
+/* Play Button */
+
+.play-btn{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+.play-btn:hover{
+
+    transform:scale(1.12);
+
+    box-shadow:0 10px 25px rgba(42,143,231,.35);
+
+}
+
+
+
+/* ======================================================
+                    PROGRESS
+====================================================== */
+
+.progress-box{
+
+    text-align:center;
+
+}
+
+
+.progress-circle{
+
+    width:150px;
+
+    height:150px;
+
+    margin:20px auto;
+
+    position:relative;
+
+}
+
+
+.progress-circle svg{
+
+    width:150px;
+
+    height:150px;
+
+    transform:rotate(-90deg);
+
+}
+
+
+.bg-circle{
+
+    fill:none;
+
+    stroke:#dfefff;
+
+    stroke-width:10;
+
+}
+
+
+.progress-ring{
+
+    fill:none;
+
+    stroke:var(--primary);
+
+    stroke-width:10;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:377;
+
+    stroke-dashoffset:377;
+
+    transition:1s;
+
+}
+
+
+.progress-text{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.progress-text span{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--primary-dark);
+
+}
+
+
+#progressStatus{
+
+    margin-top:15px;
+
+    color:var(--text-light);
+
+    font-weight:600;
+
+}
+
+
+#progressCount{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:var(--text-light);
+
+}
+
+
+
+/* ======================================================
+                ACTION BAR
+====================================================== */
+
+.action-bar{
+
+    position:sticky;
+
+    bottom:18px;
+
+    width:min(1200px,92%);
+
+    margin:35px auto;
+
+    padding:18px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.9);
+
+    backdrop-filter:blur(18px);
+
+    display:flex;
+
+    gap:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+
+.action-bar button{
+
+    flex:1;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.action-bar button i{
+
+    margin-right:8px;
+
+}
+
+
+.action-bar button:not(.primary){
+
+    background:#eef7ff;
+
+    color:var(--primary-dark);
+
+}
+
+
+.action-bar button:not(.primary):hover{
+
+    background:#dbeeff;
+
+}
+
+
+.primary{
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:white;
+
+}
+
+
+.primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(42,143,231,.35);
+
+}
+
+
+
+/* ======================================================
+                ANIMATIONS
+====================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.exercise-card{
+
+    animation:fadeUp .5s ease forwards;
+
+}
+
+
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+
+}
+
+
+.hero{
+
+    animation:fadeUp .6s ease forwards;
+
+}
+
+
+.stat-card{
+
+    animation:fadeUp .7s ease forwards;
+
+}
+
+
+
+/* Pulse Animation */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+.play-btn:active{
+
+    animation:pulse .4s;
+
+}
+
+
+
+/* ======================================================
+                SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#9fd8ff;
+
+    border-radius:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#edf8ff;
+
+}
+
+
+
+/* ======================================================
+            RESPONSIVE DESIGN
+====================================================== */
+
+@media(max-width:1100px){
+
+    .content-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        order:-1;
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    header{
+
+    padding:28px 55px;
+
+
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .container{
+
+        padding:25px;
+
+    }
+
+    .exercise-card{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .exercise-image{
+
+        width:100%;
+
+        height:180px;
+
+    }
+
+    .exercise-number{
+
+        margin:auto;
+
+    }
+
+    .exercise-time{
+
+        margin-top:10px;
+
+    }
+
+    .play-btn{
+
+        margin:auto;
+
+    }
+
+    .action-bar{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .hero-text h1{
+
+        font-size:32px;
+
+    }
+
+    .logo-text{
+
+        display:none;
+
+    }
+
+    nav{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+
+
+.hero-text p,
+.exercise-details p,
+.card p,
+.card li,
+.stat-card p,
+#progressStatus,
+#progressCount{
+
+    color:#64748B;
+
+}

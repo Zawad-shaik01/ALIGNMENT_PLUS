@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ALIGNMENT+</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+        <div class="background-blur blur1"></div>
+    <div class="background-blur blur2"></div>
+    <div class="auth-container">
+
+        <div class="auth-left">
+            <h1>ALIGNMENT+</h1>
+            <h2>Welcome..!</h2>
+            <p>
+                Continue your corrective exercise journey with personalized plans,
+                progress tracking, and doctor feedback support.
+            </p>
+        </div>
+
+        <div class="auth-box">
+            <a href="../landPage/index.html" class="back-home">← Back to Home</a>
+            <div class="tab-buttons">
+                <button type="button" class="tab active" onclick="showLogin()">Login</button>
+                <button type="button" class="tab" onclick="showRegister()">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form" novalidate>
+                <h2>Login to Your Account</h2>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="Enter your email">
+                    <small class="error-message" id="loginEmailError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="Enter your password">
+                    <small class="error-message" id="loginPasswordError"></small>
+                </div>
+
+                <button type="submit" class="auth-btn">Login</button>
+
+                <p class="form-note">
+                    Don’t have an account?
+                    <span onclick="showRegister()">Create one</span>
+                </p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="auth-form hidden" novalidate>
+                <h2>Create New Account</h2>
+
+                <div id="registerSuccess" class="success-message"></div>
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="registerName" name="name" placeholder="Enter your name">
+                    <small class="error-message" id="registerNameError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="registerEmail" name="email" placeholder="Enter your email">
+                    <small class="error-message" id="registerEmailError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" id="registerAge" name="age" placeholder="Enter your age">
+                    <small class="error-message" id="registerAgeError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="registerPassword" name="password" placeholder="Create password">
+                    <small class="error-message" id="registerPasswordError"></small>
+                </div>
+
+                <button type="submit" class="auth-btn">Register</button>
+
+                <p class="form-note">
+                    Already have an account?
+                    <span onclick="showLogin()">Login here</span>
+                </p>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
