@@ -1,0 +1,22 @@
+# XAMPP and local development
+xampp/
+*.log
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+vendor/
+
+# Temporary files
+*.tmp
